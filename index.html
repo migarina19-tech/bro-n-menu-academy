@@ -15,7 +15,23 @@
       <h1>Menu Academy</h1>
       <p class="creator">создано тобой · by Arina</p>
     </div>
-    <button class="heart" id="heartButton" type="button" aria-label="Избранное">♥</button>
+    <div class="heart-wrap">
+      <button class="heart" id="heartButton" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="quickMenu">♥</button>
+      <div class="quick-menu" id="quickMenu" hidden>
+        <button type="button" class="quick-menu-item" data-quick-action="menu">
+          <span class="quick-icon">▣</span>
+          <span><b>Карточки для изучения</b><small>Изучать блюда и описания</small></span>
+        </button>
+        <button type="button" class="quick-menu-item" data-quick-action="results">
+          <span class="quick-icon">↗</span>
+          <span><b>Результаты</b><small>Мой прогресс и баллы</small></span>
+        </button>
+        <button type="button" class="quick-menu-item" data-quick-action="tests">
+          <span class="quick-icon">✓</span>
+          <span><b>Тесты</b><small>Проверить знания</small></span>
+        </button>
+      </div>
+    </div>
   </header>
 
   <main>
