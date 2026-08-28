@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#ff4fa3">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <title>BRO&N Menu Academy — by Arina</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,7 +15,7 @@
       <h1>Menu Academy</h1>
       <p class="creator">создано тобой · by Arina</p>
     </div>
-    <div class="heart">♥</div>
+    <button class="heart" id="heartButton" type="button" aria-label="Избранное">♥</button>
   </header>
 
   <main>
@@ -22,7 +23,7 @@
       <span class="pill">Домашняя итальянская кухня</span>
       <h2>Выучи меню.<br><span>Уверенно обслуживай.</span></h2>
       <p>Учебная платформа для подготовки официантов BRO&N.</p>
-      <button class="primary" onclick="startLearning()">Начать обучение</button>
+      <button class="primary" id="startButton" type="button">Начать обучение</button>
     </section>
 
     <section class="progress card">
@@ -31,35 +32,28 @@
         <strong id="progressPercent">0%</strong>
       </div>
       <div class="bar"><div id="progressBar"></div></div>
-      <p id="progressText">Материалы ещё не добавлены</p>
+      <p id="progressText">Материалы ещё не изучены</p>
     </section>
 
     <section class="grid">
-      <button class="tile card" onclick="showSection('menu')">
+      <button class="tile card" id="menuButton" type="button">
         <span class="tile-icon">🍝</span>
         <b>Изучение меню</b>
         <small>Карточки блюд и описание</small>
       </button>
-      <button class="tile card" onclick="showSection('tests')">
+      <button class="tile card" id="testsButton" type="button">
         <span class="tile-icon">✓</span>
         <b>Тестирование</b>
         <small>Проверка знаний</small>
       </button>
-      <button class="tile card" onclick="showSection('progress')">
+      <button class="tile card" id="resultsButton" type="button">
         <span class="tile-icon">↗</span>
         <b>Результаты</b>
         <small>Баллы и прогресс</small>
       </button>
     </section>
 
-    <section id="content" class="card content">
-      <h3>Меню BRO&N</h3>
-      <p class="notice">
-        Здесь будут размещены только исходные данные из файлов меню.
-        Никакие блюда, описания или составы не придумываются автоматически.
-      </p>
-      <div id="menuList"></div>
-    </section>
+    <section id="content" class="card content" aria-live="polite"></section>
   </main>
 
   <footer>
